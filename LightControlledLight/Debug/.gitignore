@@ -3,3 +3,10 @@
 /sources.mk
 /subdir_rules.mk
 /subdir_vars.mk
+/ccsObjs.opt
+/ComparatorTest_linkInfo.xml
+/ComparatorTest.map
+/LightControlledLight_linkInfo.xml
+/LightControlledLight.map
+/lightControlledLight.pp
+/main.pp
