@@ -6,7 +6,7 @@
  * ------------------------------------------------------------------------
  * Version history:
  * 06-11-2014: Initial version
- * 06-03-2014: E-mail address in header updated.
+ * 06-03-2015: E-mail address in header updated.
  *
  * =========================================================================
  * Description:
