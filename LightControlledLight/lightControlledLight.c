@@ -15,7 +15,7 @@
  *
  * Requires:
  * LaunchPad
- * Homemade circuit
+ * Homemade circuit with LDR resistor.
  *
  * P1.4: input - Comparator input
  * P1.6: Output - Green LED on LaunchPad
