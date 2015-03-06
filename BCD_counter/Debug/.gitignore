@@ -3,3 +3,8 @@
 /sources.mk
 /subdir_rules.mk
 /subdir_vars.mk
+/BCD_counter_linkInfo.xml
+/BCD_counter.map
+/BCD_counter.pp
+/ccsObjs.opt
+/main.pp
