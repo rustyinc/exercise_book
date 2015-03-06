@@ -3,3 +3,7 @@
 /sources.mk
 /subdir_rules.mk
 /subdir_vars.mk
+/ccsObjs.opt
+/InterruptPIRsensor_linkInfo.xml
+/InterruptPIRsensor.map
+/interruptPIRsensor.pp
