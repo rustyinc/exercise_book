@@ -20,7 +20,7 @@
  * P1.4: input - Comparator input
  * P1.6: Output - Green LED on LaunchPad
  ****************************************************************************/
-#include <msp430.h> 
+#include <msp430.h>
 
 int main(void)
 {
