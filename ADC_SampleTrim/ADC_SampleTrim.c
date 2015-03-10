@@ -33,8 +33,8 @@ int main(void)
      * BIT6 and BIT7 cleared in select for enabling GPIO
      */
     P2DIR  |= (BIT7 | BIT6 | BIT5 | BIT4 | BIT3 | BIT2 | BIT1 | BIT0);
-    P2SEL  &= ~(BIT7 | BIT7);
-    P2SEL2 &= ~(BIT7 | BIT7);
+    P2SEL  &= ~(BIT7 | BIT6);
+    P2SEL2 &= ~(BIT7 | BIT6);
 
     /**
      * Setup the ADC10CTL0
@@ -43,8 +43,8 @@ int main(void)
      * ADC10IE   : Enable ADC interrupts
      */
     ADC10CTL0 = ADC10SHT_2 + ADC10ON + ADC10IE;
-    /* Set ADC input to P1.x */
-    ADC10CTL1 = INCH_5;
+    /* Set ADC input to P1.4 */
+    ADC10CTL1 = INCH_4;
     /* Enable analog input on P1.x */
     ADC10AE0 |= BIT4;
 
@@ -63,8 +63,8 @@ int main(void)
 #pragma vector=ADC10_VECTOR
 __interrupt void ADC10_ISR(void)
 {
-    /* Divide result by four and output on LEDs */
-    P2OUT = ADC10MEM << 2;
+    /* Divide result by four and output result on LEDs */
+    P2OUT = ADC10MEM >> 2;
 
     /* Restart conversion */
     ADC10CTL0 |= ENC + ADC10SC;
