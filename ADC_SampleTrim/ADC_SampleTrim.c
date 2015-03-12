@@ -45,13 +45,16 @@ int main(void)
     ADC10CTL0 = ADC10SHT_2 + ADC10ON + ADC10IE;
     /* Set ADC input to P1.4 */
     ADC10CTL1 = INCH_4;
-    /* Enable analog input on P1.x */
+    /* Enable analog input on P1.4 */
     ADC10AE0 |= BIT4;
 
     /* Enable and start conversion */
     ADC10CTL0 |= ENC + ADC10SC;
 
-    /* Enable interrupts globally - and go to sleep, zzzzzzz */
+    /**
+     * Enable interrupts globally - and go to sleep, zzzzzzz
+     * (ADC interrupt function will still work
+     */
     __bis_SR_register(GIE + LPM0_bits);
 	
 	return 0;
@@ -63,7 +66,7 @@ int main(void)
 #pragma vector=ADC10_VECTOR
 __interrupt void ADC10_ISR(void)
 {
-    /* Divide result by four and output result on LEDs */
+    /* What happens here? and why? */
     P2OUT = ADC10MEM >> 2;
 
     /* Restart conversion */
