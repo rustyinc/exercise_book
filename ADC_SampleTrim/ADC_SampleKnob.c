@@ -67,7 +67,7 @@ int main(void)
 __interrupt void ADC10_ISR(void)
 {
     /* What happens here? and why? */
-    P2OUT = ADC10MEM & 0xFF;
+    P2OUT = ADC10MEM >> 2;
 
     /* Restart conversion */
     ADC10CTL0 |= ENC + ADC10SC;
