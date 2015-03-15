@@ -1,7 +1,7 @@
 /****************************************************************************
- * Project Name:    ADC sample Trimresistor
+ * Project Name:    ADC sample Knob (Trim resistor)
  * Author:          RUST
- * Filename:        ADC_SampleTrim.c
+ * Filename:        ADC_SampleKnob.c
  * Purpose:         Class exercise
  * ------------------------------------------------------------------------
  * Version history:
@@ -67,7 +67,7 @@ int main(void)
 __interrupt void ADC10_ISR(void)
 {
     /* What happens here? and why? */
-    P2OUT = ADC10MEM >> 2;
+    P2OUT = ADC10MEM & 0xFF;
 
     /* Restart conversion */
     ADC10CTL0 |= ENC + ADC10SC;
