@@ -53,7 +53,7 @@ int main(void)
 
     /**
      * Enable interrupts globally - and go to sleep, zzzzzzz
-     * (ADC interrupt function will still work
+     * (ADC interrupt function will still work)
      */
     __bis_SR_register(GIE + LPM0_bits);
 	
