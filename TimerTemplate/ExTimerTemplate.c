@@ -75,7 +75,7 @@ int main(void)
      * Enable interrupts globally - and go to sleep, zzzzzzz
      * (Timer interrupt function will still work)
      */
-  //  __bis_SR_register(GIE + LPM3_bits);
+	__bis_SR_register(GIE + LPM3_bits);
 
 	return 0;
 }
